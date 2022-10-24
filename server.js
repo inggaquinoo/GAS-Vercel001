@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 
-app.get("/", function(req, res){
+app.get("/", (req, res){
+    res.send("Express here!!!! Here I'am 2 :) - But 2")
     console.log("Express here!!!! Here I'am 2 :)")
 })
 

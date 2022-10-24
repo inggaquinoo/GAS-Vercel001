@@ -54,7 +54,7 @@ async function accessSpreadsheet() {
     }
 
     console.log(datanode.length)
-    console.log(sheet.getCell(499, 0).formattedValue)
+    //console.log(sheet.getCell(499, 0).formattedValue)
     
 
     //Buscar un cliente

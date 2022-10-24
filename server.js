@@ -10,7 +10,13 @@ app.get("/", function(req, res){
 app.use("/users/", require("./routes/usersRoute"));
 
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
+/*
 app.listen(3001, function(){
     console.log("express server is running on port 3001")
 })
+*/

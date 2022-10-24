@@ -43,7 +43,7 @@ async function accessSpreadsheet() {
     
     datanode = new Array
 
-    for (let i=0; i<1000; i++ )
+    for (let i=0; i<229; i++ )
     {
         for(let j=0; j<=6; j++)
         {

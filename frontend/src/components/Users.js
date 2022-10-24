@@ -50,7 +50,7 @@ const Users = () => {
       
       //console.log("AJAP : ",users[0][499])
       //for (var i=0; i<1000; i++ )
-      for (var i=0; i<3500; i++ )
+      for (var i=0; i<229; i++ )
       {
         if (password === users[0][i]){
           encontroclave = true;
@@ -58,7 +58,7 @@ const Users = () => {
         }
       }
       
-      for (var i=0; i<3500; i++ )
+      for (var i=0; i<229; i++ )
       {
           if (usuario === users[0][i] && encontroclave === true){
               positionnombre = i - 5;

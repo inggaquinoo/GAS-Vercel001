@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 
-/*
+
 app.get("/", function(req, res){
     console.log("Express here!!!! Here I'am :)")
 })
-*/
 
-app.use("/users/", require("./routes/usersRoute"));
+
+//app.use("/users/", require("./routes/usersRoute"));
 
 
 const PORT = process.env.PORT || 3000;

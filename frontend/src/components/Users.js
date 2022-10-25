@@ -15,12 +15,16 @@ const Users = () => {
   const [showcuotadiaria, setShowcuotadiaria] = useState('')
   
   
+  
     useEffect(() => {
       //fetch("/users/")
+      
       fetch("http://192.168.1.24:3001/users/")
+      //fetch("http://localhost:3001/users/")
             .then(res => {
                 if(res.ok){
                     return res.json()
+                    
                 }
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
@@ -28,6 +32,7 @@ const Users = () => {
 
   const fetchcustomer = () => {
     fetch("http://192.168.1.24:3001/users/")
+    //fetch("http://localhost:3001/users/")
             .then(res => {
                 if(res.ok){
                     return res.json()

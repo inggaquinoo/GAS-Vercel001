@@ -29,6 +29,7 @@ const Users = () => {
                 }
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
+            
     }, [])
 
   const fetchcustomer = () => {

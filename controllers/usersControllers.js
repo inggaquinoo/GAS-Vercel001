@@ -91,6 +91,8 @@ async function accessSpreadsheet() {
             cuotadiaria = sheet.getCell(i, 3).formattedValue
             console.log("CUOTA DIARIA: ",cuotadiaria)
 
+            
+
         }
     }
     */

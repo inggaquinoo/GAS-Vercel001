@@ -47,7 +47,7 @@ for (let i=0; i < sheet.rowCount; i++)
     {
         for(let j=0; j<=6; j++)
         {
-            const cellvalue = sheet.getCell(i, j);
+            let cellvalue = sheet.getCell(i, j);
             //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
             datafinal.push(cellvalue.formattedValue)
         }

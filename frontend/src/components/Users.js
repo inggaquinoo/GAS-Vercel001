@@ -56,20 +56,19 @@ const Users = () => {
       var dateend;
       var dailypay;
       
-      //console.log("YEAH BABY : ",users[0][0][0][0])
+      //console.log("YEAH BABY : ",users[0])
       //console.log("YEAH BABY : ",users)
 
+      
       users = users.map(function(elem){
             //console.log(elem)
-            if(elem == "GUSTAVO AQUINO"){
+            elem = elem + "ÑEEE"
               return elem;
-            }
-            
             }
             );
 
-            console.log(users)
-
+            console.log(users[0])
+      
       //console.log("YEAH BABY : ",users[0][1][0])
       //console.log("AJAP : ",users[0][499])
       //for (var i=0; i<1000; i++ )

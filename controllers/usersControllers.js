@@ -41,119 +41,36 @@ async function accessSpreadsheet() {
  
 //Todos los clientes
 
-datafinal = new Array;
+datasheetgoogle = new Array;
 
 for (let i=0; i < sheet.rowCount; i++)
     {
+        
         for(let j=0; j<=6; j++)
         {
             let cellvalue = sheet.getCell(i, j);
             //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-            datafinal.push(cellvalue.formattedValue)
+            
+            datasheetgoogle.push(cellvalue.formattedValue)
         }
     }
-   
+    
+    console.log("datasheetgoogle :",datasheetgoogle[0])
+    console.log("datasheetgoogle :",datasheetgoogle[1])
+    console.log("datasheetgoogle :",datasheetgoogle[2])
+    
+    /*
+    dataseveryonearray = new Array
+  
+    dataseveryonearray = new Array;
+    for (let i=0; i < datasheetgoogle.length ; i++)
+    {
+        dataseveryonearray.push(datasheetgoogle[i])
+    }
 
 
-
-
-console.log(sheet.rowCount)
-datanodecol1 = new Array; //columna 1
-datanodecol2 = new Array; //columna 2
-datanodecol3 = new Array; //columna 3
-datanodecol4 = new Array; //columna 4
-datanodecol5 = new Array; //columna 5
-datanodecol6 = new Array; //columna 6
-
-for (let i=0; i<sheet.rowCount; i++)
-{
-        const cellvalue = sheet.getCell(i, 0);
-        //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-        datanodecol1.push(cellvalue.formattedValue)
-}
-
-for (let i=0; i<sheet.rowCount; i++)
-{
-        const cellvalue = sheet.getCell(i, 1);
-        //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-        datanodecol2.push(cellvalue.formattedValue)
-}
-
-for (let i=0; i<sheet.rowCount; i++)
-{
-        const cellvalue = sheet.getCell(i, 2);
-        //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-        datanodecol3.push(cellvalue.formattedValue)
-}
-
-for (let i=0; i<sheet.rowCount; i++)
-{
-        const cellvalue = sheet.getCell(i, 3);
-        //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-        datanodecol4.push(cellvalue.formattedValue)
-}
-
-for (let i=0; i<sheet.rowCount; i++)
-{
-        const cellvalue = sheet.getCell(i, 4);
-        //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-        datanodecol5.push(cellvalue.formattedValue)
-}
-
-for (let i=0; i<sheet.rowCount; i++)
-{
-        const cellvalue = sheet.getCell(i, 5);
-        //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-        datanodecol6.push(cellvalue.formattedValue)
-}
-
-
-//console.log(datanodecol1)
-//console.log(datanodecol2)
-
-
-datafromsheet = new Array; //Creamos un array para almacenar solo los Estados
-
-for(var h=0; h < sheet.rowCount; h++)
- {
-    datafromsheet[h] = new Array; //Crear 1 array por cada fila
- }
-
-
-for(var k=0; k < sheet.rowCount; k++)
- {
-    datafromsheet[k][0] = datanodecol1[k];
- }
-
- for(var k=0; k < sheet.rowCount; k++)
- {
-    datafromsheet[k][1] = datanodecol2[k];
- }
-
- for(var k=0; k < sheet.rowCount; k++)
- {
-    datafromsheet[k][2] = datanodecol3[k];
- }
-
- for(var k=0; k < sheet.rowCount; k++)
- {
-    datafromsheet[k][3] = datanodecol4[k];
- }
-
- for(var k=0; k < sheet.rowCount; k++)
- {
-    datafromsheet[k][4] = datanodecol5[k];
- }
-
- for(var k=0; k < sheet.rowCount; k++)
- {
-    datafromsheet[k][5] = datanodecol6[k];
- }
-
-
-console.log(datafromsheet)
-//AHORAAAAAAAAAA SSIIIIIIIIIIIIIIIIIII
-
+    console.log("dataseveryonearray: ",dataseveryonearray)
+*/
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /*
@@ -255,7 +172,10 @@ exports.usersControllers = (req, res) => {
         //usersList: [datanode]
         //usersList: [datatemp]
         //usersList: [datafromsheet]
-        usersList: [datafinal]
+        //usersList: [datafinal]
+        usersList: [datasheetgoogle]
+
+        
 
         
         

@@ -58,16 +58,22 @@ const Users = () => {
       
       //console.log("YEAH BABY : ",users[0])
       //console.log("YEAH BABY : ",users)
-
+      console.log("hola")
+      dataarraysolution = new Array;
       
-      users = users.map(function(elem){
-            //console.log(elem)
-            elem = elem + "ÑEEE"
-              return elem;
-            }
+      dataarraysolution = users
+      //console.log("dataarraysolution: ",dataarraysolution)
+      console.log("users: ",users)
+      users.map(
+              function(elem){
+                  //console.log(elem)
+                  //elem = elem + "ÑEEE"
+              return console.log("ELEMENTO: ",elem)
+              }
             );
-
-            console.log(users[0])
+      
+            //console.log(users[0])
+            
       
       //console.log("YEAH BABY : ",users[0][1][0])
       //console.log("AJAP : ",users[0][499])

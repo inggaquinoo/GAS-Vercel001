@@ -29,7 +29,7 @@ const Users = () => {
                 }
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
-            
+
     }, [])
 
   const fetchcustomer = () => {
@@ -56,6 +56,8 @@ const Users = () => {
       var dateend;
       var dailypay;
       
+      console.log("YEAH BABY : ",users[0][0][0])
+      console.log("YEAH BABY : ",users[1][0][0])
       //console.log("AJAP : ",users[0][499])
       //for (var i=0; i<1000; i++ )
       for (var i=0; i<229; i++ )

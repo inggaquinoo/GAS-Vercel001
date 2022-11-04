@@ -41,6 +41,22 @@ async function accessSpreadsheet() {
  
 //Todos los clientes
 
+datafinal = new Array;
+
+for (let i=0; i < sheet.rowCount; i++)
+    {
+        for(let j=0; j<=6; j++)
+        {
+            const cellvalue = sheet.getCell(i, j);
+            //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
+            datafinal.push(cellvalue.formattedValue)
+        }
+    }
+   
+
+
+
+
 console.log(sheet.rowCount)
 datanodecol1 = new Array; //columna 1
 datanodecol2 = new Array; //columna 2
@@ -238,7 +254,10 @@ exports.usersControllers = (req, res) => {
         ]*/
         //usersList: [datanode]
         //usersList: [datatemp]
-        usersList: [datafromsheet]
+        //usersList: [datafromsheet]
+        usersList: [datafinal]
+
+        
         
         
     })

@@ -56,10 +56,24 @@ const Users = () => {
       var dateend;
       var dailypay;
       
-      console.log("YEAH BABY : ",users[0][0][0])
-      console.log("YEAH BABY : ",users[1][0][0])
+      //console.log("YEAH BABY : ",users[0][0][0][0])
+      //console.log("YEAH BABY : ",users)
+
+      users = users.map(function(elem){
+            //console.log(elem)
+            if(elem == "GUSTAVO AQUINO"){
+              return elem;
+            }
+            
+            }
+            );
+
+            console.log(users)
+
+      //console.log("YEAH BABY : ",users[0][1][0])
       //console.log("AJAP : ",users[0][499])
       //for (var i=0; i<1000; i++ )
+      /*
       for (var i=0; i<229; i++ )
       {
         if (password === users[0][i]){
@@ -67,7 +81,9 @@ const Users = () => {
           //console.log("AJAP : ",encontroclave)
         }
       }
+      */
       
+      /*
       for (var i=0; i<229; i++ )
       {
           if (usuario === users[0][i] && encontroclave === true){
@@ -97,7 +113,7 @@ const Users = () => {
             
           }
       }
-      
+      */
       setShowuser(namecliente)
       setShowfechacontrato(datestart)
       setShowfechainicio(datebegin)

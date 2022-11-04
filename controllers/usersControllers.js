@@ -41,18 +41,24 @@ async function accessSpreadsheet() {
   
     //Todos los clientes
     
-    datanode = new Array
+    datanode = new Array;
+    datatemp = new Array;
 
-    for (let i=0; i<229; i++ )
+    for (let i=0; i<229; i++)
     {
+        datatemp[i] = new Array;
         for(let j=0; j<=6; j++)
         {
             const cellvalue = sheet.getCell(i, j);
             console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
             datanode.push(cellvalue.formattedValue)
+            datatemp[i] = new Array; //Creamos el array en cada vuelta para almacenar cada uno de los estados
+                                                  //en un arrayas bidimensional
+            datatemp[i][0] = datanode[i];
         }
     }
-
+    console.log(datatemp)
+    //console.log(datanode)
     console.log(datanode.length)
     //console.log(sheet.getCell(499, 0).formattedValue)
     
@@ -106,6 +112,8 @@ exports.usersControllers = (req, res) => {
             "CLAVE",
             "ALEX JUNIOR SOPLOPUCO ATO"
         ]*/
-        usersList: [datanode]
+        //usersList: [datanode]
+        usersList: [datatemp]
+        
     })
 }

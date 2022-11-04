@@ -19,8 +19,8 @@ const Users = () => {
     useEffect(() => {
       //fetch("/users/")
       
-      fetch("https://polar-forest-95712.herokuapp.com/users/")
-      //fetch("http://192.168.1.24:3001/users/")
+      //fetch("https://polar-forest-95712.herokuapp.com/users/")
+      fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
       //fetch("http://localhost:3001/users/")
             .then(res => {
                 if(res.ok){
@@ -33,8 +33,8 @@ const Users = () => {
     }, [])
 
   const fetchcustomer = () => {
-    fetch("https://polar-forest-95712.herokuapp.com/users/")
-    //fetch("http://192.168.1.24:3001/users/")
+    //fetch("https://polar-forest-95712.herokuapp.com/users/")
+    fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
     //fetch("http://localhost:3001/users/")
             .then(res => {
                 if(res.ok){
@@ -70,9 +70,9 @@ const Users = () => {
       for (var i=0; i<users[0].length; i++ )
       {
         //if (password === users[0][i]){
-        if ("ANA BARBERA" === users[0][i]){
+        if ("JUANA LA CUBANA" === users[0][i]){
           encontroclave = true;
-          console.log("AJAP : ",encontroclave)
+          console.log("AJAP JUANA : ",encontroclave)
         }
       }
       

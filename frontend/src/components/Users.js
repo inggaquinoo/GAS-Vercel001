@@ -58,7 +58,7 @@ const Users = () => {
       
       //console.log("YEAH BABY : ",users[0])
       //console.log("YEAH BABY : ",users)
-      console.log("hola ")
+      console.log("holazzzz ")
       //dataarraysolution = new Array;
       
       //dataarraysolution = users

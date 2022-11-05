@@ -70,10 +70,11 @@ const Users = () => {
       console.log("usuario: ",usuario)
       for (var i=0; i<users[0].length; i++ )
       {
-        if (usuario === users[0][i]){
+        if (usuario === users[0][i] && password === users[0][i + 1]){
         //if ("GUSTAVO AQUINO" === users[0][i]){
           //encontroclave = true;
           console.log("WELCOME: ",usuario)
+          console.log("KEY: ",usuario)
         }
       }
       

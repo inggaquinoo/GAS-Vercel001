@@ -28,7 +28,7 @@ const LogIn = ({ navigation }) => {
       </View>
       <View>
             <TouchableOpacity
-            onPress={()=>navigation.navigate("dentroDrawer")}
+            onPress={()=>navigation.navigate("DentroDrawer")}
             >
                 <Text>INGRESAR</Text>
             </TouchableOpacity>  

@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 const DentroDrawer = () => {
   return (
     <View>
-      <Text>dentroDrawer</Text>
+      <Text>dentroDrawer, ahora estamos dentro</Text>
     </View>
   )
 }

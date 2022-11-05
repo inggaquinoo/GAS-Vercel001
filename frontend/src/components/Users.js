@@ -67,21 +67,32 @@ const Users = () => {
       console.log("users: ",users[0].length)
       
       //BUSCAR USUARIO
-      console.log("usuario: ",usuario)
+      //console.log("usuario: ",usuario)
       for (var i=0; i<users[0].length; i++ )
       {
-        if (usuario === users[0][i] && password === users[0][i + 1]){
-        //if ("GUSTAVO AQUINO" === users[0][i]){
-          //encontroclave = true;
-          //console.log("WELCOME: ",usuario)
-          //console.log("KEY: ",usuario)
-          console.log("ACCESO CONCEDIDO")
-        }
-        else
+        if(usuario === "" || password === "" )
         {
-          console.log("USUARIO NO ENCONTRADO O FALTA USUARIO ó CLAVE")
+          console.log("DEBE INGRESAR USUARIO Y CLAVE")
           break;
         }
+        else  
+        { 
+          //console.log("EVALUANDO USUARIO Y CLAVE")
+            
+          if (usuario === users[0][i] && password === users[0][i + 1]){
+            //if ("GUSTAVO AQUINO" === users[0][i]){
+              //encontroclave = true;
+              //console.log("WELCOME: ",usuario)
+              //console.log("KEY: ",usuario)
+              console.log("ACCESO CONCEDIDO")
+            }
+            else
+            {
+              console.log("USUARIO NO ENCONTRADO")
+              break;
+            }
+            
+          }
       }
       
       

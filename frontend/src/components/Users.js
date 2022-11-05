@@ -58,7 +58,7 @@ const Users = () => {
       
       //console.log("YEAH BABY : ",users[0])
       //console.log("YEAH BABY : ",users)
-      console.log("holazzzz ")
+      
       //dataarraysolution = new Array;
       
       //dataarraysolution = users
@@ -66,13 +66,14 @@ const Users = () => {
       console.log("users: ",users[0][1])
       console.log("users: ",users[0].length)
       
-      
+      //BUSCAR USUARIO
+      console.log("usuario: ",usuario)
       for (var i=0; i<users[0].length; i++ )
       {
-        //if (password === users[0][i]){
-        if ("GUSTAVO AQUINO BABY BABY CHIIII 444 555 666" === users[0][i]){
-          encontroclave = true;
-          console.log("AJAP tavo : ",encontroclave)
+        if (usuario === users[0][i]){
+        //if ("GUSTAVO AQUINO" === users[0][i]){
+          //encontroclave = true;
+          console.log("WELCOME: ",usuario)
         }
       }
       
@@ -114,12 +115,6 @@ const Users = () => {
       setShowfechatermino(dateend)
       setShowcuotadiaria(dailypay)
 
-   /*
-     users.map(function(user){
-                  //console.log(user[0,2])
-                  return user;
-              })
-    */
       return (
         showuser
 

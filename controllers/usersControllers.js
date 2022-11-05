@@ -42,23 +42,21 @@ async function accessSpreadsheet() {
 //Todos los clientes
 
 datasheetgoogle = new Array;
-
+//sheet.rowCount = es el numero de filas con datos de la hoja de google
 for (let i=0; i < sheet.rowCount; i++)
     {
-        
         for(let j=0; j<=6; j++)
         {
             let cellvalue = sheet.getCell(i, j);
             //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
-            
             datasheetgoogle.push(cellvalue.formattedValue)
         }
     }
     
-    console.log("datasheetgoogle :",datasheetgoogle[0])
-    console.log("datasheetgoogle :",datasheetgoogle[1])
-    console.log("datasheetgoogle :",datasheetgoogle[2])
-    
+    console.log(datasheetgoogle.length) 
+    //Cada elemento del array es representado por una celda
+    //En este caso datasheetgoogle.length = 3500 porque 500 filas x 7 columnas = 3500 elementos
+      
     /*
     dataseveryonearray = new Array
   

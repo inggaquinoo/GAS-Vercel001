@@ -84,7 +84,7 @@ const Users = () => {
         showfechatermino,
         showcuotadiaria
       )
-    }
+    }//Fin de funcion fetchcustomer
 
     return(
         /*

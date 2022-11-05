@@ -76,6 +76,11 @@ const Users = () => {
           console.log("WELCOME: ",usuario)
           console.log("KEY: ",usuario)
         }
+        else
+        {
+          console.log("USUARIO NO ENCONTRADO O FALTA USUARIO ó CLAVE")
+          break;
+        }
       }
       
       

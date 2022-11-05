@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 
-const dentroDrawer = () => {
+const DentroDrawer = () => {
   return (
     <View>
       <Text>dentroDrawer</Text>
@@ -10,4 +10,4 @@ const dentroDrawer = () => {
   )
 }
 
-export default dentroDrawer;
+export default DentroDrawer;

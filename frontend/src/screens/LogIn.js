@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 
-const LogIn = () => {
+const LogIn = ({ navigation }) => {
   
   return (
     <View>
@@ -28,7 +28,7 @@ const LogIn = () => {
       </View>
       <View>
             <TouchableOpacity
-            onPress={()=>navigation.navigate("Users")}
+            onPress={()=>navigation.navigate("dentroDrawer")}
             >
                 <Text>INGRESAR</Text>
             </TouchableOpacity>  

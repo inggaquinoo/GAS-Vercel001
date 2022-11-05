@@ -14,7 +14,7 @@ const LogOut = ({navigation }) => {
     navigation.navigate("LogIn")
   }
   
-  exit()
+
   return (
     <View>
         <TouchableOpacity

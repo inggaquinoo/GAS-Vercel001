@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 
 const LogOut = ({navigation }) => {
@@ -13,8 +13,17 @@ const LogOut = ({navigation }) => {
   const exit = () => {
     navigation.navigate("LogIn")
   }
+  
   exit()
-  return 
+  return (
+    <View>
+        <TouchableOpacity
+        onPress={exit()}
+        >
+          <Text>Cerrar Sesión</Text>
+        </TouchableOpacity>
+    </View>
+  )
   
 }
 

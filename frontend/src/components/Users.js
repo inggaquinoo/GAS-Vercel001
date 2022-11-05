@@ -70,9 +70,9 @@ const Users = () => {
       for (var i=0; i<users[0].length; i++ )
       {
         //if (password === users[0][i]){
-        if ("JUANA LA CUBANA" === users[0][i]){
+        if ("GUSTAVO AQUINO" === users[0][i]){
           encontroclave = true;
-          console.log("AJAP JUANA : ",encontroclave)
+          console.log("AJAP tavo : ",encontroclave)
         }
       }
       

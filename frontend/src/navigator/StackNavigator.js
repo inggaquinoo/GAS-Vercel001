@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import LogIn from '../screens/Login';
-import LogOut from '../screens/Logout';
+import LogIn from '../screens/LogIn';
+import LogOut from '../screens/LogOut';
 import DrawerNavigation from './DrawerNavigation';
 import { View, Text } from 'react-native'
 

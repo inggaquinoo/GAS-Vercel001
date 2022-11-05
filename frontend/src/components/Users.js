@@ -43,31 +43,13 @@ const Users = () => {
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
 
-      var encontroclave = false;
-      var positionnombre;
-      var positioncontrato;
-      var positioninicio;
-      var positiontermino;
-      var positioncuotadiaria;
-
       var namecliente;
       var datestart;
       var datebegin;
       var dateend;
       var dailypay;
       
-      //console.log("YEAH BABY : ",users[0])
-      //console.log("YEAH BABY : ",users)
-      
-      //dataarraysolution = new Array;
-      
-      //dataarraysolution = users
-      //console.log("dataarraysolution: ",dataarraysolution)
-      console.log("users: ",users[0][1])
-      console.log("users: ",users[0].length)
-      
-      //BUSCAR USUARIO
-      //console.log("usuario: ",usuario)
+      //VALIDANDO QUE USUARIO Y CLAVE NO ESTEN VACÍOS
       for (var i=0; i<users[0].length; i++ )
       {
         if(usuario === "" || password === "" )
@@ -77,56 +59,22 @@ const Users = () => {
         }
         else  
         { 
-          //console.log("EVALUANDO USUARIO Y CLAVE")
-            
           if (usuario === users[0][i] && password === users[0][i + 1]){
-            //if ("GUSTAVO AQUINO" === users[0][i]){
-              //encontroclave = true;
-              //console.log("WELCOME: ",usuario)
-              //console.log("KEY: ",usuario)
               console.log("ACCESO CONCEDIDO")
+              namecliente = users[0][i-5] //Nos da el nombre real
+              datestart = users[0][i-4] //Nos da la fecha de contrato
+              datebegin = users[0][i-3] //Nos da la fecha de inicio
+              dateend = users[0][i-2] //Nos da la fecha de termino
+              dailypay = users[0][i-1] //Nos da la cuota diaria
+              break;
             }
             else
             {
               console.log("USUARIO NO ENCONTRADO")
-              break;
             }
-            
           }
       }
       
-      
-      /*
-      for (var i=0; i<229; i++ )
-      {
-          if (usuario === users[0][i] && encontroclave === true){
-              positionnombre = i - 5;
-              console.log("NOMBRE: ",users[0][positionnombre])
-              namecliente = users[0][positionnombre]
-
-              positioncontrato = i - 4
-              console.log("FECHA CONTRATO: ",users[0][positioncontrato])
-              datestart = users[0][positioncontrato]
-
-              positioninicio = i - 3
-              console.log("FECHA DE INICIO: ",users[0][positioninicio])
-              datebegin = users[0][positioninicio]
-
-              positiontermino = i - 2
-              console.log("FECHA DE TERMINO: ",users[0][positiontermino])
-              dateend = users[0][positiontermino]
-
-              positioncuotadiaria = i - 1
-              console.log("CUOTA DIARIA: ",users[0][positioncuotadiaria])
-              dailypay = users[0][positioncuotadiaria]
-              break;
-          }
-          else{
-            console.log("Usuario No encontrado!")
-            
-          }
-      }
-      */
       setShowuser(namecliente)
       setShowfechacontrato(datestart)
       setShowfechainicio(datebegin)

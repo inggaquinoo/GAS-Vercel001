@@ -55,18 +55,18 @@ const Users = () => {
           }
           else  
           { 
-            if (usuario === users[0][i] && password === users[0][i + 1]){
+            if (usuario === users[0][i] && password === users[0][i + 1] && "ACTIVO" === users[0][i - 1]){
                 console.log("ACCESO CONCEDIDO")
-                namecliente = users[0][i-5] //Nos da el nombre real
-                datestart = users[0][i-4] //Nos da la fecha de contrato
-                datebegin = users[0][i-3] //Nos da la fecha de inicio
-                dateend = users[0][i-2] //Nos da la fecha de termino
-                dailypay = users[0][i-1] //Nos da la cuota diaria
+                namecliente = users[0][i-6] //Nos da el nombre real
+                datestart = users[0][i-5] //Nos da la fecha de contrato
+                datebegin = users[0][i-4] //Nos da la fecha de inicio
+                dateend = users[0][i-3] //Nos da la fecha de termino
+                dailypay = users[0][i-2] //Nos da la cuota diaria
                 break;
               }
               else
               {
-                console.log("USUARIO NO ENCONTRADO")
+                console.log("USUARIO NO ENCONTRADO ó NO TIENE CRÉDITO ASIGNADO")
               }
             }
         }//FIN DEL FOR

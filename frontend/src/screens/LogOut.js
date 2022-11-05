@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 
+
 const LogOut = ({navigation }) => {
   
   
@@ -11,9 +12,34 @@ const LogOut = ({navigation }) => {
   }, [])
   */
   const exit = () => {
-    navigation.navigate("LogIn")
+    navigation.navigate("DrawerNavigation",{
+      screen: 'StackNavigator',
+      params:{
+          screen: 'LogIn'
+      }
+    })
   }
   
+
+/*
+  navigation.navigate('DrawerNavigation',{
+    //BottomTabNavigation está dentro de DrawerNavigation
+    screen: 'BottomTabNavigation',
+    params: {
+                //Home esta dentro de BottomTabNavigation el cual
+                //está dentro de DrawerNavigation
+        screen: 'Profile',
+        params: {
+                    id:'Login',
+                    Names_:name
+                }
+        
+            }
+})
+
+*/
+
+
 
   return (
     <View>

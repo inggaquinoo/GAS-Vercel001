@@ -14,18 +14,14 @@ const Users = () => {
   const [showfechatermino, setShowfechatermino] = useState('')
   const [showcuotadiaria, setShowcuotadiaria] = useState('')
   
-  
-  
-    useEffect(() => {
+  useEffect(() => {
       //fetch("/users/")
-      
       //fetch("https://polar-forest-95712.herokuapp.com/users/")
       fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
       //fetch("http://localhost:3001/users/")
             .then(res => {
                 if(res.ok){
                     return res.json()
-                    
                 }
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
@@ -51,29 +47,29 @@ const Users = () => {
       
       //VALIDANDO QUE USUARIO Y CLAVE NO ESTEN VACÍOS
       for (var i=0; i<users[0].length; i++ )
-      {
-        if(usuario === "" || password === "" )
         {
-          console.log("DEBE INGRESAR USUARIO Y CLAVE")
-          break;
-        }
-        else  
-        { 
-          if (usuario === users[0][i] && password === users[0][i + 1]){
-              console.log("ACCESO CONCEDIDO")
-              namecliente = users[0][i-5] //Nos da el nombre real
-              datestart = users[0][i-4] //Nos da la fecha de contrato
-              datebegin = users[0][i-3] //Nos da la fecha de inicio
-              dateend = users[0][i-2] //Nos da la fecha de termino
-              dailypay = users[0][i-1] //Nos da la cuota diaria
-              break;
-            }
-            else
-            {
-              console.log("USUARIO NO ENCONTRADO")
-            }
+          if(usuario === "" || password === "" )
+          {
+            console.log("DEBE INGRESAR USUARIO Y CLAVE")
+            break;
           }
-      }
+          else  
+          { 
+            if (usuario === users[0][i] && password === users[0][i + 1]){
+                console.log("ACCESO CONCEDIDO")
+                namecliente = users[0][i-5] //Nos da el nombre real
+                datestart = users[0][i-4] //Nos da la fecha de contrato
+                datebegin = users[0][i-3] //Nos da la fecha de inicio
+                dateend = users[0][i-2] //Nos da la fecha de termino
+                dailypay = users[0][i-1] //Nos da la cuota diaria
+                break;
+              }
+              else
+              {
+                console.log("USUARIO NO ENCONTRADO")
+              }
+            }
+        }//FIN DEL FOR
       
       setShowuser(namecliente)
       setShowfechacontrato(datestart)
@@ -82,8 +78,11 @@ const Users = () => {
       setShowcuotadiaria(dailypay)
 
       return (
-        showuser
-
+        showuser,
+        showfechacontrato,
+        showfechainicio,
+        showfechatermino,
+        showcuotadiaria
       )
     }
 
@@ -122,7 +121,7 @@ const Users = () => {
                   <TouchableOpacity
                   onPress={()=>fetchcustomer()}
                   >
-                      <Text style={{  fontSize: 40 }}>INGRESAR</Text>
+                      <Text style={{ fontSize: 40 }}>INGRESAR</Text>
                   </TouchableOpacity>  
               </View>
               <View>

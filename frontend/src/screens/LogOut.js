@@ -18,7 +18,7 @@ const LogOut = ({navigation }) => {
   return (
     <View>
         <TouchableOpacity
-        onPress={exit()}
+        onPress={exit}
         >
           <Text>Cerrar Sesión</Text>
         </TouchableOpacity>

@@ -10,8 +10,7 @@ const StackNavigator = () => {
   return (
     // headerShown: false -> oculta el encabezado de arriba del stack
       <Stack.Navigator  screenOptions={{ headerShown: false } } >
-        <Stack.Screen name="Login"  options={{ title: "Sofeen APP" }} component={LogIn} />
-        {/* <Stack.Screen name="BottomTabNavigation" options={{ title: "Hoshii Partners" }} component={BottomTabNavigation} />  */}
+        {/* <Stack.Screen name="Login"  options={{ title: "Sofeen APP" }} component={LogIn} /> */}
         <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} />
       </Stack.Navigator>
   )

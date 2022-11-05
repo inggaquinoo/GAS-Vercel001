@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 
-const LogIn = ({ navigation }) => {
+const LogIn = ({ navigation, route }) => {
   
   const [users, setUsers] = useState([]);
   
@@ -25,6 +25,8 @@ const LogIn = ({ navigation }) => {
 
 
   const fetchcustomer = () => {
+console.log("aqui tamoss-2!!!")
+
     //fetch("https://polar-forest-95712.herokuapp.com/users/")
     fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
     //fetch("http://localhost:3001/users/")
@@ -58,8 +60,17 @@ const LogIn = ({ navigation }) => {
                 datebegin = users[0][i-4] //Nos da la fecha de inicio
                 dateend = users[0][i-3] //Nos da la fecha de termino
                 dailypay = users[0][i-2] //Nos da la cuota diaria
+                navigation.navigate("DrawerNavigation",{
+                  screen: 'Principal',
+                  params: {
+                    namecliente_p: namecliente,
+                    datestart_p: datestart,
+                    datebegin_p: datebegin,
+                    dateend_p: dateend,
+                    dailypay_p: dailypay
+                }
+                })
                 break;
-                navigation.navigate("DrawerNavigation")
               }
               else
               {

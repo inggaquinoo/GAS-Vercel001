@@ -73,8 +73,9 @@ const Users = () => {
         if (usuario === users[0][i] && password === users[0][i + 1]){
         //if ("GUSTAVO AQUINO" === users[0][i]){
           //encontroclave = true;
-          console.log("WELCOME: ",usuario)
-          console.log("KEY: ",usuario)
+          //console.log("WELCOME: ",usuario)
+          //console.log("KEY: ",usuario)
+          console.log("ACCESO CONCEDIDO")
         }
         else
         {

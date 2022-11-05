@@ -70,7 +70,7 @@ const Users = () => {
       for (var i=0; i<users[0].length; i++ )
       {
         //if (password === users[0][i]){
-        if ("GUSTAVO AQUINO BABY BABY CHIIII 444 555" === users[0][i]){
+        if ("GUSTAVO AQUINO BABY BABY CHIIII 444 555 666" === users[0][i]){
           encontroclave = true;
           console.log("AJAP tavo : ",encontroclave)
         }

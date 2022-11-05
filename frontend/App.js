@@ -4,10 +4,9 @@ import Users from './src/components/Users';
 
 const App = () => {
   return (
-    <View>
-      { /* <LogIn /> */}
-      <Users />
-    </View>
+    <NavigationContainer>
+      <StackNavigator />    
+    </NavigationContainer>
   )
 }
 

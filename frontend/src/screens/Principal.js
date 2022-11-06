@@ -5,32 +5,31 @@ import { styles } from '../theme/appTheme';
 
 const Principal = ({ navigation, route }) => {    
   
-  console.log("namecliente_p", route)
+  console.log("namecliente_p", params.namecliente_p)
   
 
     return(
       <View style={styles.container }>
-        <View style={{ flex: 1, borderWidth: 2, borderColor: 'black'}}>
-          <Text style={styles.cliente }>HOLA:</Text>
-          <Text style={styles.clientetexto }>GUSTAVO AQUINO</Text>
+        <View style={ styles.bloquesdatos }>
+          <Text style={styles.clientetexto }>HOLA: SANCHEZ GOMEZ LUCY DEL SOCORRO</Text>
         </View>
 
-        <View style={{ flex: 1, borderWidth: 2, borderColor: 'black'}}>
+        <View style={styles.bloquesdatos}>
           <Text style={styles.fcontrato }>FECHA DE CONTRATO</Text>
           <Text style={styles.fcontratotexto }>5/11/2022</Text>
         </View>
         
-        <View style={{ flex: 1, borderWidth: 2, borderColor: 'black'}}>
+        <View style={styles.bloquesdatos}>
           <Text style={styles.finicio }>FECHA DE INICIO</Text>
           <Text style={styles.finiciotexto }>5/11/2022</Text>
         </View>
         
-        <View style={{ flex: 1, borderWidth: 2, borderColor: 'black'}}>
+        <View style={styles.bloquesdatos}>
           <Text style={styles.ftermino }>FECHA DE TERMINO</Text>
           <Text style={styles.fterminotexto }>5/11/2022</Text>
         </View>
         
-        <View style={{ flex: 1, borderWidth: 2, borderColor: 'black'}}>
+        <View style={styles.bloquesdatos}>
           <Text style={styles.cdiaria }>CUOTA DIARIA</Text>
           <Text style={styles.cdiariatexto }>5/11/2022</Text>
         </View>

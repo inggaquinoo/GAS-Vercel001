@@ -6,55 +6,60 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "black",
     },
-    cliente:{
-        fontSize: 30,
-        textAlign: 'center',
-        color: 'white',
-    },
     clientetexto:{
-        fontSize: 30,
-        textAlign: 'center',
+        flex: 1,
+        fontSize: 17,
+        textAlign: 'left',
         color: 'white',
+        borderWidth: 2,
+        borderColor: 'white',
+        color: 'yellow',
+        textAlignVertical: 'center',
     },
     fcontrato:{
-        fontSize: 30,
+        fontSize: 20,
         textAlign: 'center',
         color: 'white',
     },
     fcontratotexto:{
-        fontSize: 30,
+        fontSize: 25,
         textAlign: 'center',
         color: 'white',
     },
     finicio:{
-        fontSize: 30,
+        fontSize: 20,
         textAlign: 'center',
         color: 'white',
     },
     finiciotexto:{
-        fontSize: 30,
+        fontSize: 25,
         textAlign: 'center',
         color: 'white',
     },
     ftermino:{
-        fontSize: 30,
+        fontSize: 20,
         textAlign: 'center',
         color: 'white',
     },
     fterminotexto:{
-        fontSize: 30,
+        fontSize: 25,
         textAlign: 'center',
         color: 'white',
     },
     cdiaria:{
-        fontSize: 30,
+        fontSize: 20,
         textAlign: 'center',
         color: 'white',
     },
     cdiariatexto:{
-        fontSize: 30,
+        fontSize: 25,
         textAlign: 'center',
         color: 'white'
+    },
+    bloquesdatos:{
+        flex: 1, 
+        borderWidth: 1, 
+        borderColor: 'white',
     }
     
 

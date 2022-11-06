@@ -46,18 +46,15 @@ const LogIn = ({ navigation, route }) => {
         {
           if(usuario === "" || password === "" )
           {
-            //console.log("Debe ingresar Usuario y Clave")
-            
             Alert.alert('ADVERTENCIA','Debe ingresar Usuario y Clave',[
-              {text: 'OK'}
+              {text: 'OK', onPress: () => console.log("BOTON: Debe ingresar Usuario y Clave")}
              ])
-
             break;
           }
           else  
           { 
             if (usuario === users[0][i] && password === users[0][i + 1] && "ACTIVO" === users[0][i - 1]){
-                console.log("ACCESO CONCEDIDO")
+                //console.log("ACCESO CONCEDIDO")
                 namecliente = users[0][i-6] //Nos da el nombre real
                 datestart = users[0][i-5] //Nos da la fecha de contrato
                 datebegin = users[0][i-4] //Nos da la fecha de inicio
@@ -79,7 +76,9 @@ const LogIn = ({ navigation, route }) => {
               }
               else
               {
-                console.log("USUARIO NO ENCONTRADO ó NO TIENE CRÉDITO ASIGNADO")
+                Alert.alert('INFORMACIÓN','Usuario no encontrado ó No tiene crédito asignado',[
+                  {text: 'OK', onPress: () => console.log("BOTÓN: Usuario no encontrado ó No tiene crédito asignado")}
+                 ])
               }
             }
         }//FIN DEL FOR

@@ -60,6 +60,8 @@ console.log("aqui tamoss-2!!!")
                 datebegin = users[0][i-4] //Nos da la fecha de inicio
                 dateend = users[0][i-3] //Nos da la fecha de termino
                 dailypay = users[0][i-2] //Nos da la cuota diaria
+                setUsuario("hola ")
+                setPassword(" passs pass")
                 navigation.navigate("DrawerNavigation",{
                   screen: 'Principal',
                   params: {

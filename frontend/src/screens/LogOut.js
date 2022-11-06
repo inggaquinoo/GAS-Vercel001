@@ -8,9 +8,19 @@ const LogOut = ({navigation }) => {
   const exit = () => {
     console.log("leyendo funcion exit")
     
-    navigation.navigate("StackNavigator",{
-      screen: 'LogIn'
-    })
+    //navigation.navigate("StackNavigator",{
+    //  screen: 'LogIn'
+    //})
+
+    navigation.navigate('DrawerNavigation',{
+      //BottomTabNavigation está dentro de DrawerNavigation
+      screen: 'StackNavigator',
+      params: {
+                  //Home esta dentro de BottomTabNavigation el cual
+                  //está dentro de DrawerNavigation
+              screen: 'LogIn',
+              }
+  })
     
   }
 
@@ -49,7 +59,11 @@ const LogOut = ({navigation }) => {
 
 
 
-  return 
+  return (
+    <View>
+        <Text>esta es cerrar sesion</Text>
+    </View>
+  )
   
 }
 

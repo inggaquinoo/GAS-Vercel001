@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 
 
 const LogIn = ({ navigation, route }) => {
@@ -34,7 +34,7 @@ const LogIn = ({ navigation, route }) => {
                 }
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
-/*
+
       var namecliente;
       var datestart;
       var datebegin;
@@ -46,7 +46,12 @@ const LogIn = ({ navigation, route }) => {
         {
           if(usuario === "" || password === "" )
           {
-            console.log("DEBE INGRESAR USUARIO Y CLAVE")
+            //console.log("Debe ingresar Usuario y Clave")
+            
+            Alert.alert('ADVERTENCIA','Debe ingresar Usuario y Clave',[
+              {text: 'OK'}
+             ])
+
             break;
           }
           else  
@@ -78,12 +83,6 @@ const LogIn = ({ navigation, route }) => {
               }
             }
         }//FIN DEL FOR
-      
-        */
-        navigation.navigate("DrawerNavigation",{
-          screen: 'Principal'
-        })
-      
 
       return 
 

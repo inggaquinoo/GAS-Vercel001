@@ -14,11 +14,6 @@ const Principal = ({ navigation, route }) => {
 
     return(
       <View style={styles.container }>
-          <View>
-              <Text style={{ color: 'white', fontSize: 30}}>Principal</Text>
-          </View>
-      {/*
-     
         <View style={ styles.bloquesdatos }>
           <Text style={styles.clientetexto }>HOLA: {params.namecliente_p}</Text>
         </View>
@@ -42,10 +37,25 @@ const Principal = ({ navigation, route }) => {
           <Text style={styles.cdiaria }>CUOTA DIARIA</Text>
           <Text style={styles.cdiariatexto }>S/. {params.dailypay_p}</Text>
         </View>
-      
-    */}
 
-      
+        <View style={styles.bloquesdatos}>
+          <TouchableOpacity
+          style={{ 
+            backgroundColor: 'blue',
+            borderRadius: 20,
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: 40,
+            width: 150,
+            marginTop: 30,
+            marginLeft: 130,
+          }}
+          onPress={()=>navigation.navigate("LogIn")}
+          >
+            <Text style={{ fontSize: 15, color: 'white', fontWeight: 'bold' }}>SALIR</Text>
+          </TouchableOpacity>
+        </View>
+
     </View>
     )
 }

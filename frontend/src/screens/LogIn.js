@@ -40,7 +40,7 @@ const LogIn = ({ navigation, route }) => {
       if(usuario === "" || password === "" )
           {
             Alert.alert('ADVERTENCIA','Debe ingresar Usuario y Clave',[
-              {text: 'OK', onPress: () => console.log("BOTON: Debe ingresar Usuario y Clave")}
+              {text: 'OK', /*onPress: () => console.log("BOTON: Debe ingresar Usuario y Clave") */}
              ])
           }
       else  
@@ -79,7 +79,7 @@ const LogIn = ({ navigation, route }) => {
                 setUsuario("")
                 setPassword("")  
                 Alert.alert('INFORMACIÓN','Usuario no encontrado ó No tiene crédito asignado',[
-                    {text: 'OK', onPress: () => console.log("BOTÓN: Usuario no encontrado ó No tiene crédito asignado")}
+                    {text: 'OK'}
                   ]);
                   
               }
@@ -88,9 +88,9 @@ const LogIn = ({ navigation, route }) => {
     }//Fin de funcion fetchcustomer
 
     useEffect(() => {
-      console.log("EMPEZANDO USEEFFECT...")
+      //console.log("EMPEZANDO USEEFFECT...")
         llenararraydatos();
-      console.log("FINALIZANDO USEEFFECT...")
+      //console.log("FINALIZANDO USEEFFECT...")
     }, [])
 
   return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { styles } from '../theme/appTheme';
-//import router from './controllers/usersControllers';
 
 const Principal = ({ navigation, route }) => {    
   
@@ -14,8 +13,6 @@ const Principal = ({ navigation, route }) => {
       {text: 'NO'}
     ]);
   }
-
-
 
     return(
       <View style={styles.container }>

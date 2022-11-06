@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 
-
 const LogIn = ({ navigation, route }) => {
 
   const [users, setUsers] = useState([]);
-  
   const [usuario, setUsuario] = useState('')
   const [password, setPassword] = useState('') 
 
-  useEffect(() => {
-    console.log("EMPEZANDO USEEFFECT...")
-      llenararraydatos();
-    console.log("FINALIZANDO USEEFFECT...")
-  }, [])
-
-
-
-
   const llenararraydatos = async () => {
-
     //fetch("https://polar-forest-95712.herokuapp.com/users/")
     await fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
     //fetch("http://localhost:3001/users/")
@@ -31,24 +19,8 @@ const LogIn = ({ navigation, route }) => {
             .then(jsonRes => setUsers(jsonRes.usersList))
   }
 
-  
-
 
   const fetchcustomer = async() => {
-    
-    console.log("LEYENDO:  - >>   fetch();")
-    
-    /*
-    //fetch("https://polar-forest-95712.herokuapp.com/users/")
-    await fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
-    //fetch("http://localhost:3001/users/")
-            .then(res => {
-                if(res.ok){
-                    return res.json()
-                }
-            })
-            .then(jsonRes => setUsers(jsonRes.usersList))
-    */
       var namecliente;
       var datestart;
       var datebegin;
@@ -57,14 +29,14 @@ const LogIn = ({ navigation, route }) => {
       noencontrado_credito = false;
       
       //VALIDANDO QUE USUARIO Y CLAVE NO ESTEN VACÍOS
+/*
       console.log("empieza a buscar")
       console.log("users[0]: ",users.length)
       console.log("INICIAL: ",users[0][0])
-      //console.log("FINAL: ",users[0][1839])
-      console.log("FINAL: ",users[0][425839])
+      console.log("FINAL: ",users[0][1839])
       console.log("usuario ",usuario)
       console.log("password ",password)
-
+*/
       if(usuario === "" || password === "" )
           {
             Alert.alert('ADVERTENCIA','Debe ingresar Usuario y Clave',[
@@ -111,18 +83,15 @@ const LogIn = ({ navigation, route }) => {
                   ]);
                   
               }
-              
             }//FIN DEL ELSE
-
-
-            
       return 
-
-      
     }//Fin de funcion fetchcustomer
 
-
-
+    useEffect(() => {
+      console.log("EMPEZANDO USEEFFECT...")
+        llenararraydatos();
+      console.log("FINALIZANDO USEEFFECT...")
+    }, [])
 
   return (
     <View style={{ flex: 1, backgroundColor: 'black' }}>
@@ -174,4 +143,4 @@ const LogIn = ({ navigation, route }) => {
   )
 }
 
-export default LogIn
+export default LogIn;

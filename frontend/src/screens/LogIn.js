@@ -34,7 +34,7 @@ const LogIn = ({ navigation, route }) => {
                 }
             })
             .then(jsonRes => setUsers(jsonRes.usersList))
-
+/*
       var namecliente;
       var datestart;
       var datebegin;
@@ -79,6 +79,10 @@ const LogIn = ({ navigation, route }) => {
             }
         }//FIN DEL FOR
       
+        */
+        navigation.navigate("DrawerNavigation",{
+          screen: 'Principal'
+        })
       
 
       return 

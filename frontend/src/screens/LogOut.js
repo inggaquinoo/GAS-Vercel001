@@ -5,20 +5,28 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 const LogOut = ({navigation }) => {
   
-  
-  /*
+  const exit = () => {
+    console.log("leyendo funcion exit")
+    
+    navigation.navigate("StackNavigator",{
+      screen: 'LogIn'
+    })
+    
+  }
+
+
+  //Javascript siempre esjecuta primero Useeffect, así que
+  //no importa en donde lo coloques, siempre se ejecutará primero
   useEffect(() => {
+    
+    console.log("ejecutando useeffect")
     exit()
   }, [])
-  */
-  const exit = () => {
-    navigation.navigate("DrawerNavigation",{
-      screen: 'StackNavigator',
-      params:{
-          screen: 'LogIn'
-      }
-    })
-  }
+  
+
+  
+  
+ 
   
 
 /*
@@ -41,15 +49,7 @@ const LogOut = ({navigation }) => {
 
 
 
-  return (
-    <View>
-        <TouchableOpacity
-        onPress={exit}
-        >
-          <Text>Cerrar Sesión</Text>
-        </TouchableOpacity>
-    </View>
-  )
+  return 
   
 }
 

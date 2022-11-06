@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
         borderColor: 'white',
         color: 'yellow',
         textAlignVertical: 'center',
+        fontWeight: 'bold',
     },
     fcontrato:{
         fontSize: 20,

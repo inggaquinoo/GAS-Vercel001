@@ -14,6 +14,11 @@ const Principal = ({ navigation, route }) => {
 
     return(
       <View style={styles.container }>
+          <View>
+              <Text style={{ color: 'white', fontSize: 30}}>Principal</Text>
+          </View>
+      {/*
+     
         <View style={ styles.bloquesdatos }>
           <Text style={styles.clientetexto }>HOLA: {params.namecliente_p}</Text>
         </View>
@@ -37,7 +42,11 @@ const Principal = ({ navigation, route }) => {
           <Text style={styles.cdiaria }>CUOTA DIARIA</Text>
           <Text style={styles.cdiariatexto }>S/. {params.dailypay_p}</Text>
         </View>
-      </View>
+      
+    */}
+
+      
+    </View>
     )
 }
 

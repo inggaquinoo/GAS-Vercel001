@@ -60,8 +60,8 @@ const LogIn = ({ navigation, route }) => {
                 datebegin = users[0][i-4] //Nos da la fecha de inicio
                 dateend = users[0][i-3] //Nos da la fecha de termino
                 dailypay = users[0][i-2] //Nos da la cuota diaria
-                setUsuario("")
-                setPassword("")
+                // setUsuario("")
+                // setPassword("")
                 navigation.navigate("DrawerNavigation",{
                   screen: 'Principal',
                   params: {
@@ -78,11 +78,14 @@ const LogIn = ({ navigation, route }) => {
               {
                 Alert.alert('INFORMACIÓN','Usuario no encontrado ó No tiene crédito asignado',[
                   {text: 'OK', onPress: () => console.log("BOTÓN: Usuario no encontrado ó No tiene crédito asignado")}
-                 ])
+                 ]);
+                 break;
               }
             }
         }//FIN DEL FOR
 
+        setUsuario("")
+        setPassword("")
       return 
 
       

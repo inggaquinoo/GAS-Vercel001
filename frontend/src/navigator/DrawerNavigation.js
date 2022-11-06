@@ -10,7 +10,6 @@ const DrawerNavigation = () => {
         // headerShown: false oculta las 3 rayitas de arriba
         <Drawer.Navigator  screenOptions={{ headerShown: true } }>
              <Drawer.Screen name="Principal"  component={Principal} options={{ title: "SOFEN APP" }} />
-             <Drawer.Screen name="LogOut"  component={LogOut} options={{ title: "Cerrar Sesión" }} />
         </Drawer.Navigator>
   )
 }

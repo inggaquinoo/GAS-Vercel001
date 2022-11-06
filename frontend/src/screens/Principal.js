@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { styles } from '../theme/appTheme';
 //import router from './controllers/usersControllers';
 
 const Principal = ({ navigation, route }) => {    
   
-  //console.log("namecliente_p", params.namecliente_p)
-
   const params = route.params;
-
   //console.log("namecliente_p", params.namecliente_p)
-  
+
+  const salir = () => {
+    Alert.alert('PREGUNTA','Está seguro que desea salir?',[
+      {text: 'SI', onPress: () => navigation.navigate("LogIn")},
+      {text: 'NO'}
+    ]);
+  }
+
+
 
     return(
       <View style={styles.container }>
@@ -50,7 +55,7 @@ const Principal = ({ navigation, route }) => {
             marginTop: 30,
             marginLeft: 130,
           }}
-          onPress={()=>navigation.navigate("LogIn")}
+          onPress={salir}
           >
             <Text style={{ fontSize: 15, color: 'white', fontWeight: 'bold' }}>SALIR</Text>
           </TouchableOpacity>

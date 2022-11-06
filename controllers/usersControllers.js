@@ -43,8 +43,12 @@ for (let i=0; i < sheet.rowCount; i++)
     //console.log("Cantidad de elemenos del array datasheetgoogle: ",datasheetgoogle.length) 
     //Cada elemento del array es representado por una celda
     //En este caso datasheetgoogle.length = 3500 porque 500 filas x 7 columnas = 3500 elementos
+    //console.log(datasheetgoogle.length)
 }
-accessSpreadsheet() 
+
+accessSpreadsheet()
+
+
 
 exports.usersControllers = (req, res) => {
     res.json({

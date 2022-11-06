@@ -4,6 +4,9 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 const LogIn = ({ navigation, route }) => {
   
+  var blankuser;
+  var blankpassword;
+  
   const [users, setUsers] = useState([]);
   
   const [usuario, setUsuario] = useState('')
@@ -60,8 +63,8 @@ console.log("aqui tamoss-2!!!")
                 datebegin = users[0][i-4] //Nos da la fecha de inicio
                 dateend = users[0][i-3] //Nos da la fecha de termino
                 dailypay = users[0][i-2] //Nos da la cuota diaria
-                setUsuario("hola ")
-                setPassword(" passs pass")
+                blankuser = ""
+                blankpassword = ""
                 navigation.navigate("DrawerNavigation",{
                   screen: 'Principal',
                   params: {
@@ -72,6 +75,7 @@ console.log("aqui tamoss-2!!!")
                     dailypay_p: dailypay
                 }
                 })
+                
                 break;
               }
               else
@@ -80,6 +84,7 @@ console.log("aqui tamoss-2!!!")
               }
             }
         }//FIN DEL FOR
+      
       
 
       return 
@@ -104,6 +109,7 @@ console.log("aqui tamoss-2!!!")
                 style={{backgroundColor: 'red'}}
                 placeholder = 'Usuario'
                 onChangeText={(value) => setUsuario(value)}
+                value = {blankuser}
             ></TextInput>
       </View>
       <View>
@@ -112,6 +118,7 @@ console.log("aqui tamoss-2!!!")
                 style={{backgroundColor: 'red'}}
                 placeholder = 'Clave'
                 onChangeText={(value) => setPassword(value)}
+                value = {blankpassword}
             ></TextInput>
       </View>
       <View>

@@ -92,7 +92,7 @@ const LogIn = ({ navigation, route }) => {
   return (
     <View style={{ flex: 1, backgroundColor: 'black' }}>
         <View style={{ flex: 0.5, backgroundColor: 'black'}}>
-            <Text style={{ flex: 1, textAlign: 'center', textAlignVertical:  'center', color: 'white' }}>IMAGEN</Text>
+            <Text style={{ flex: 1, textAlign: 'center', textAlignVertical:  'center', color: 'white' }}>LOGO</Text>
         </View>
         
         <View style={{ flex: 1, backgroundColor: 'black' }}>
@@ -112,6 +112,7 @@ const LogIn = ({ navigation, route }) => {
                         placeholder = 'Clave'
                         onChangeText={(value) => setPassword(value)}
                         value = {password}
+                        secureTextEntry={true}
                     ></TextInput>
               </View>
               <View>

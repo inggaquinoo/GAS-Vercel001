@@ -3,10 +3,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 
 const LogIn = ({ navigation, route }) => {
-  
-  var blankuser;
-  var blankpassword;
-  
+
   const [users, setUsers] = useState([]);
   
   const [usuario, setUsuario] = useState('')
@@ -28,8 +25,6 @@ const LogIn = ({ navigation, route }) => {
 
 
   const fetchcustomer = () => {
-console.log("aqui tamoss-2!!!")
-
     //fetch("https://polar-forest-95712.herokuapp.com/users/")
     fetch("http://192.168.1.24:3001/users/") //PARA TRABAJAR EN LOCAL
     //fetch("http://localhost:3001/users/")
@@ -63,8 +58,8 @@ console.log("aqui tamoss-2!!!")
                 datebegin = users[0][i-4] //Nos da la fecha de inicio
                 dateend = users[0][i-3] //Nos da la fecha de termino
                 dailypay = users[0][i-2] //Nos da la cuota diaria
-                blankuser = ""
-                blankpassword = ""
+                setUsuario("")
+                setPassword("")
                 navigation.navigate("DrawerNavigation",{
                   screen: 'Principal',
                   params: {
@@ -75,7 +70,6 @@ console.log("aqui tamoss-2!!!")
                     dailypay_p: dailypay
                 }
                 })
-                
                 break;
               }
               else
@@ -96,39 +90,34 @@ console.log("aqui tamoss-2!!!")
 
 
   return (
-    <View>
-      <Text
-        style={{ 
-            fontSize: 40,
-            fontWeight: 'bold'
-         }}
-      >LogIn</Text>
-      <View>
-            <Text>Usuario: </Text>
-            <TextInput 
-                style={{backgroundColor: 'red'}}
-                placeholder = 'Usuario'
-                onChangeText={(value) => setUsuario(value)}
-                value = {blankuser}
-            ></TextInput>
-      </View>
-      <View>
-            <Text>Clave: </Text>
-            <TextInput 
-                style={{backgroundColor: 'red'}}
-                placeholder = 'Clave'
-                onChangeText={(value) => setPassword(value)}
-                value = {blankpassword}
-            ></TextInput>
-      </View>
-      <View>
-            <TouchableOpacity
-            onPress={fetchcustomer}
-            >
-                <Text>INGRESAR</Text>
-            </TouchableOpacity>  
+    <View style={{ flex: 1 }}>
+        <View>
+              <Text>Usuario: </Text>
+              <TextInput 
+                  style={{backgroundColor: 'red'}}
+                  placeholder = 'Usuario'
+                  onChangeText={(value) => setUsuario(value)}
+                  value = {usuario}
+              ></TextInput>
         </View>
-    </View>
+        <View>
+              <Text>Clave: </Text>
+              <TextInput 
+                  style={{backgroundColor: 'red'}}
+                  placeholder = 'Clave'
+                  onChangeText={(value) => setPassword(value)}
+                  value = {password}
+              ></TextInput>
+        </View>
+        <View>
+              <TouchableOpacity
+                onPress={fetchcustomer}
+              >
+                 <Text>INGRESAR</Text>
+              </TouchableOpacity>
+          </View>
+      </View>
+    
     
   )
 }

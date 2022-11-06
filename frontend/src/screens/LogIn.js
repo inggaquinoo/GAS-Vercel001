@@ -90,35 +90,51 @@ const LogIn = ({ navigation, route }) => {
 
 
   return (
-    <View style={{ flex: 1 }}>
-        <View>
-              <Text>Usuario: </Text>
-              <TextInput 
-                  style={{backgroundColor: 'red'}}
-                  placeholder = 'Usuario'
-                  onChangeText={(value) => setUsuario(value)}
-                  value = {usuario}
-              ></TextInput>
+    <View style={{ flex: 1, backgroundColor: 'black' }}>
+        <View style={{ flex: 0.5, backgroundColor: 'black'}}>
+            <Text style={{ flex: 1, textAlign: 'center', textAlignVertical:  'center', color: 'white' }}>IMAGEN</Text>
         </View>
-        <View>
-              <Text>Clave: </Text>
-              <TextInput 
-                  style={{backgroundColor: 'red'}}
-                  placeholder = 'Clave'
-                  onChangeText={(value) => setPassword(value)}
-                  value = {password}
-              ></TextInput>
+        
+        <View style={{ flex: 1, backgroundColor: 'black' }}>
+              <View style={{ paddingVertical: 10 }}>
+                    <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Usuario</Text>
+                    <TextInput 
+                        style={{backgroundColor: 'white'}}
+                        placeholder = 'Usuario'
+                        onChangeText={(value) => setUsuario(value)}
+                        value = {usuario}
+                    ></TextInput>
+              </View>
+              <View>
+                    <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }} >Clave</Text>
+                    <TextInput 
+                        style={{backgroundColor: 'white'}}
+                        placeholder = 'Clave'
+                        onChangeText={(value) => setPassword(value)}
+                        value = {password}
+                    ></TextInput>
+              </View>
+              <View>
+                  <TouchableOpacity
+                        style={{
+                                backgroundColor: 'blue',
+                                borderRadius: 20,
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                height: 40,
+                                width: 150,
+                                marginTop: 10,
+                                marginLeft: 130,
+                      }}
+                          onPress={fetchcustomer}
+                        >
+                      <View>
+                          <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>INGRESAR</Text>
+                      </View>    
+                  </TouchableOpacity>
+              </View>
         </View>
-        <View>
-              <TouchableOpacity
-                onPress={fetchcustomer}
-              >
-                 <Text>INGRESAR</Text>
-              </TouchableOpacity>
-          </View>
-      </View>
-    
-    
+    </View>
   )
 }
 

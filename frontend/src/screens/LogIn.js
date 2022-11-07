@@ -69,7 +69,9 @@ const LogIn = ({ navigation, route }) => {
                       datestart_p: datestart,
                       datebegin_p: datebegin,
                       dateend_p: dateend,
-                      dailypay_p: dailypay
+                      dailypay_p: dailypay,
+                      numcuotas_p: numcuotas,
+                      cantcuotaspagadas_p: cantcuotaspagadas
                             }
                             })
                   break;

@@ -41,6 +41,11 @@ const Principal = ({ navigation, route }) => {
         </View>
 
         <View style={styles.bloquesdatos}>
+          <Text style={styles.cdiaria }>CUOTAS PAGADAS</Text>
+          <Text style={styles.cdiariatexto }>{params.cantcuotaspagadas_p} / {params.numcuotas_p} </Text>
+        </View>
+
+        <View style={styles.bloquesdatos}>
           <TouchableOpacity
           style={{ 
             backgroundColor: 'blue',

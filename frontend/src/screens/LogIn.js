@@ -29,14 +29,14 @@ const LogIn = ({ navigation, route }) => {
       noencontrado_credito = false;
       
       //VALIDANDO QUE USUARIO Y CLAVE NO ESTEN VACÍOS
-/*
+
       console.log("empieza a buscar")
       console.log("users[0]: ",users.length)
       console.log("INICIAL: ",users[0][0])
-      console.log("FINAL: ",users[0][1839])
+      console.log("FINAL: ",users[0][2289])
       console.log("usuario ",usuario)
       console.log("password ",password)
-*/
+
       if(usuario === "" || password === "" )
           {
             Alert.alert('ADVERTENCIA','Debe ingresar Usuario y Clave',[
@@ -49,11 +49,12 @@ const LogIn = ({ navigation, route }) => {
             {
               if (usuario === users[0][i] && password === users[0][i + 1] && "ACTIVO" === users[0][i - 1]){
                   //console.log("ACCESO CONCEDIDO")
-                  namecliente = users[0][i-6] //Nos da el nombre real
-                  datestart = users[0][i-5] //Nos da la fecha de contrato
-                  datebegin = users[0][i-4] //Nos da la fecha de inicio
-                  dateend = users[0][i-3] //Nos da la fecha de termino
-                  dailypay = users[0][i-2] //Nos da la cuota diaria
+                  namecliente = users[0][i-8] //Nos da el nombre real
+                  datestart = users[0][i-7] //Nos da la fecha de contrato
+                  datebegin = users[0][i-6] //Nos da la fecha de inicio
+                  dateend = users[0][i-5] //Nos da la fecha de termino
+                  dailypay = users[0][i-4] //Nos da la cuota diaria
+                  console.log(namecliente,datestart,datebegin,dateend,dailypay )
                   setUsuario("")
                   setPassword("")
                   noencontrado_credito = false;

@@ -33,7 +33,7 @@ datasheetgoogle = new Array;
 //console.log("Número de filas: ",sheet.rowCount)
 for (let i=0; i < sheet.rowCount; i++)
     {
-        for(let j=0; j<=7; j++)
+        for(let j=0; j < sheet.columnCount; j++)
         {
             let cellvalue = sheet.getCell(i, j);
             //console.log("VALOR: ","i: ",i,"j: ",j, " - ",cellvalue.formattedValue)
@@ -41,6 +41,7 @@ for (let i=0; i < sheet.rowCount; i++)
         }
     }
     //console.log("Cantidad de elemenos del array datasheetgoogle: ",datasheetgoogle.length) 
+    console.log(datasheetgoogle[2289]) 
     //Cada elemento del array es representado por una celda
     //En este caso datasheetgoogle.length = 3500 porque 500 filas x 7 columnas = 3500 elementos
     //console.log(datasheetgoogle.length)

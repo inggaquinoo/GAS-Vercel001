@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, ImageBackground } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
 
 const LogIn = ({ navigation, route }) => {
 
@@ -102,20 +102,20 @@ const LogIn = ({ navigation, route }) => {
 
   return (
     <View style={{ flex: 1, backgroundColor: 'black' }}>
-        {/*}
-        <View style={{ flex: 0.5, backgroundColor: 'white'}}>
-            <Text style={{ flex: 1, textAlign: 'center', textAlignVertical:  'center', color: 'white' }}>IMAGEN DEL LOGO</Text>
-        </View>
-        */}
-        <View>
-          <ImageBackground 
-            source={require('../assets/images/imagenadentro1.png')}
-            >
-              <Text>PRECIOZXXXXX</Text>
-              <View>
-                  <Text>TEXT INSIDE</Text>
-              </View>
-          </ImageBackground>
+        <View style={{
+          width: '100%',
+          height: '50%',
+          borderTopLeftRadius: 10,
+          borderTopRightRadius: 10,
+          overflow: 'hidden'
+        }}>
+          <Image
+            source={require('../assets/images/imagenlogin.png')}
+            style={{
+              height: '100%',
+              width: '100%'
+            }}
+            />
         </View>
         
         <View style={{ flex: 1, backgroundColor: 'black' }}>

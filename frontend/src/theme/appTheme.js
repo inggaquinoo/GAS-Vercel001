@@ -19,42 +19,42 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     fcontrato:{
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
         color: 'black',
     },
     fcontratotexto:{
-        fontSize: 25,
+        fontSize: 23,
         textAlign: 'center',
         color: 'black',
     },
     finicio:{
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
         color: 'black',
     },
     finiciotexto:{
-        fontSize: 25,
+        fontSize: 23,
         textAlign: 'center',
         color: 'black',
     },
     ftermino:{
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
         color: 'black',
     },
     fterminotexto:{
-        fontSize: 25,
+        fontSize: 23,
         textAlign: 'center',
         color: 'black',
     },
     cdiaria:{
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
         color: 'black',
     },
     cdiariatexto:{
-        fontSize: 25,
+        fontSize: 23,
         textAlign: 'center',
         color: 'black'
     },

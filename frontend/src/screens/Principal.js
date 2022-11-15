@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, Image, ImageBackground } from 'react-native';
 import { styles } from '../theme/appTheme';
+import CircularProgress from 'react-native-circular-progress-indicator';
 
 const Principal = ({ navigation, route }) => {    
   
@@ -13,7 +14,7 @@ const Principal = ({ navigation, route }) => {
       {text: 'NO'}
     ]);
   }
-
+var tempo = 13;
     return(
       <View style={styles.container }>
         
@@ -32,17 +33,17 @@ const Principal = ({ navigation, route }) => {
           
             <View style={styles.bloquesdatos}>
               <Text style={styles.fcontrato }>FECHA DE CONTRATO</Text>
-              <Text style={styles.fcontratotexto}>10//11/2022</Text>
+              <Text style={styles.fcontratotexto}>10/11/2022</Text>
             </View>
             
             <View style={styles.bloquesdatos}>
               <Text style={styles.finicio }>FECHA DE INICIO</Text>
-              <Text style={styles.finiciotexto }>11//11/2022</Text>
+              <Text style={styles.finiciotexto }>11/11/2022</Text>
             </View>
             
             <View style={styles.bloquesdatos}>
               <Text style={styles.ftermino }>FECHA DE TERMINO</Text>
-              <Text style={styles.fterminotexto }>18//11/2022</Text>
+              <Text style={styles.fterminotexto }>18/11/2022</Text>
             </View>
             
             <View style={styles.bloquesdatos}>
@@ -50,10 +51,43 @@ const Principal = ({ navigation, route }) => {
               <Text style={styles.cdiariatexto }> S/. 30.00 </Text>
             </View>
 
+            {/*
             <View style={styles.bloquesdatos}>
               <Text style={styles.cdiaria }>CUOTAS PAGADAS</Text>
               <Text style={styles.cdiariatexto }>28/30</Text>
             </View>
+          */}
+            
+            <View style={styles.bloquesdatos}>
+              <Text style={styles.cdiaria }>CUOTAS PAGADAS</Text>
+              {/* <Text style={styles.cdiariatexto }>28/30</Text> */}
+              <View style={{alignItems: 'center'}}>
+              <CircularProgress 
+                value={25} 
+                maxValue={30}
+                radius={36}
+                valueSuffix={'/'+'30'}
+                valueSuffixStyle={{fontSize: 17}}
+                inActiveStrokeColor={'red'}
+                activeStrokeColor={'green'}
+                progressValueFontSize={17} // tamaño de letra del interior 
+                activeStrokeWidth={7} // grosor de la linea del circulo activo
+                inActiveStrokeWidth={7}
+                progressValueColor={'black'}
+                duration={1500}
+                //title={"Title"}
+                //titleColor={'white'}
+                //titleStyle={{fontWeight: 'bold'}}
+                //inActiveStrokeOpacity={'blue'}
+            />
+                </View>              
+            </View>
+
+            
+            
+
+   
+
           </ImageBackground>
 
             <View style={styles.bloquesdatos}>

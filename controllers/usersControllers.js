@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const creds = require('../client_secret.json');
 
@@ -41,7 +42,7 @@ for (let i=0; i < sheet.rowCount; i++)
         }
     }
     //console.log("Cantidad de elemenos del array datasheetgoogle: ",datasheetgoogle.length) 
-    console.log(datasheetgoogle[2289]) 
+    //console.log(datasheetgoogle[2289]) 
     //Cada elemento del array es representado por una celda
     //En este caso datasheetgoogle.length = 3500 porque 500 filas x 7 columnas = 3500 elementos
     //console.log(datasheetgoogle.length)

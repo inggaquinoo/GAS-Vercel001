@@ -1,3 +1,18 @@
+const express = require("express");
+const app = express();
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+    //console.log(`Our app is running on portss ${ PORT }`);
+});
+
+app.get("/", function(req, res){
+    res.send("Welcome to Principal - Running on Vercel")
+    //console.log("Express here!!!! Here I'am 2 :)")
+})
+
+/*
+
 require('dotenv').config();
 const express = require("express");
 const app = express();
@@ -18,8 +33,11 @@ app.listen(PORT, () => {
     //console.log(`Our app is running on port ${ PORT }`);
 });
 
+*/
+
 /*
 app.listen(3001, function(){
     console.log("express server is running on port 3001")
 })
 */
+

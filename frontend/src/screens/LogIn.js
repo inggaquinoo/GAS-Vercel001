@@ -8,8 +8,8 @@ const LogIn = ({ navigation, route }) => {
   const [password, setPassword] = useState('') 
 
   const llenararraydatos = async () => {
-    //fetch("https://polar-forest-95712.herokuapp.com/users/")
-    await fetch("http://192.168.1.24:5000/users/") //PARA TRABAJAR EN LOCAL
+    await fetch("https://polar-forest-95712.herokuapp.com/users/")
+    //await fetch("http://192.168.1.24:5000/users/") //PARA TRABAJAR EN LOCAL
     //fetch("http://localhost:3001/users/")
             .then(res => {
                 if(res.ok){

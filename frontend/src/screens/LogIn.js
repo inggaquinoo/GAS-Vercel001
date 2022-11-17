@@ -11,7 +11,7 @@ const LogIn = ({ navigation, route }) => {
     //Con Heroku
     //await fetch("https://polar-forest-95712.herokuapp.com/users/")
     //Con Vercel
-    await fetch("https://gas-vercel001-bpupmvid6-inggaquinoo.vercel.app/users/")
+    await fetch("https://gas-vercel001.vercel.app/users")
     //En Local
     //await fetch("http://192.168.1.24:5000/users/") //PARA TRABAJAR EN LOCAL
     //fetch("http://localhost:3001/users/")
@@ -62,7 +62,7 @@ const LogIn = ({ navigation, route }) => {
                   dailypay = users[0][i-4] //Nos da la cuota diaria
                   numcuotas = users[0][i-2] //Nos da el numero de cuotas del credito
                   cantcuotaspagadas = users[0][i-1] //Nos da cuantas cuotas va pagando el cliente
-                  console.log(namecliente,datestart,datebegin,dateend,dailypay, numcuotas, cantcuotaspagadas )
+                  //console.log(namecliente,datestart,datebegin,dateend,dailypay, numcuotas, cantcuotaspagadas )
                   setUsuario("")
                   setPassword("")
                   noencontrado_credito = false;

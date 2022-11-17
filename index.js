@@ -15,7 +15,7 @@ app.use("/users/", require("./routes/usersRoute"));
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+    //console.log(`Our app is running on port ${ PORT }`);
 });
 
 /*

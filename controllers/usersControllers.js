@@ -1,5 +1,5 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const creds = require('../client_secret.json');
+const creds = require('../account_google.json');
 
 async function accessSpreadsheet() {
   //Dentro de GoogleSpreadsheet(AQUI VA LA PARTE DE LA URL DE LA HOJA DE GOOGLE QUE QUEREMOS ACCEDER)
